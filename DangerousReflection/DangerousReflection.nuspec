@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<package>
+	<metadata>
+		<id>DangerousReflection</id>
+		<version>0.9.0</version>
+		<title>DangerousReflection</title>
+		<authors>303248153</authors>
+		<owners>303248153</owners>
+		<description>Ultra fast yet dangerous reflection extension, for now it only works on .Net Framework.</description>
+		<summary>Ultra fast yet dangerous reflection extension, for now it only works on .Net Framework.</summary>
+		<language>en-US</language>
+		<projectUrl>https://github.com/OldMansClub/DangerousReflection</projectUrl>
+		<licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+		<requireLicenseAcceptance>true</requireLicenseAcceptance>
+		<tags></tags>
+		<dependencies>
+			<group targetFramework="net461">
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="..\LICENSE.txt" target="." />
+		<file src=".\bin\Release\net461\DangerousReflection.dll" target="lib\net461" />
+		<file src=".\bin\Release\net461\DangerousReflection.xml" target="lib\net461" />
+		<file src=".\bin\Release\net461\DangerousReflection.pdb" target="lib\net461" />
+	</files>
+</package>
