@@ -38,7 +38,7 @@ namespace DangerousReflection {
 			_fieldsIndex = _allFields.ToDictionary(x => x.Name);
 			var maxFieldNameLength = _allFields.Max(x => (int?)x.Name.Length) ?? 0;
 			_fieldsIndexByLength = new FieldInfo[maxFieldNameLength];
-			_fieldsIndexByHash = new FieldInfo[HashMask];
+			_fieldsIndexByHash = new FieldInfo[HashMask + 1];
 			foreach (var field in _allFields) {
 				var lenIndex = field.Name.Length - 1;
 				var hash = field.Name.GetHashCode() & HashMask;
@@ -54,7 +54,7 @@ namespace DangerousReflection {
 			_propertiesIndex = _allProperties.ToDictionary(x => x.Name);
 			var maxPropertyNameLength = _allProperties.Max(x => (int?)x.Name.Length) ?? 0;
 			_propertiesIndexByLength = new PropertyInfo[maxPropertyNameLength];
-			_propertiesIndexByHash = new PropertyInfo[HashMask];
+			_propertiesIndexByHash = new PropertyInfo[HashMask + 1];
 			foreach (var property in _allProperties) {
 				var lenIndex = property.Name.Length - 1;
 				var hash = property.Name.GetHashCode() & HashMask;
@@ -71,7 +71,7 @@ namespace DangerousReflection {
 			_methodsIndex = _allMethods.ToDictionary(x => x.Name);
 			var maxMethodNameLength = _allMethods.Max(x => (int?)x.Name.Length) ?? 0;
 			_methodsIndexByLength = new MethodInfo[maxMethodNameLength];
-			_methodsIndexByHash = new MethodInfo[HashMask];
+			_methodsIndexByHash = new MethodInfo[HashMask + 1];
 			foreach (var method in _allMethods) {
 				var lenIndex = method.Name.Length - 1;
 				var hash = method.Name.GetHashCode() & HashMask;
