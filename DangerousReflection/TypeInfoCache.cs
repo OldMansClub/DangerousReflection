@@ -95,7 +95,9 @@ namespace DangerousReflection {
 				return null;
 			}
 			var field = _fieldsIndexByLength[lenIndex];
-			if (field != null && field.Name == name) {
+			if (field == null) {
+				return null;
+			} else if (field.Name == name) {
 				return field;
 			}
 			// use hash index
@@ -124,7 +126,9 @@ namespace DangerousReflection {
 				return null;
 			}
 			var property = _propertiesIndexByLength[lenIndex];
-			if (property != null && property.Name == name) {
+			if (property == null) {
+				return null;
+			} else if (property.Name == name) {
 				return property;
 			}
 			// use hash index
@@ -153,7 +157,9 @@ namespace DangerousReflection {
 				return null;
 			}
 			var method = _methodsIndexByLength[lenIndex];
-			if (method != null && method.Name == name) {
+			if (method == null) {
+				return null;
+			} else if (method.Name == name) {
 				return method;
 			}
 			// use hash index
