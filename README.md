@@ -1,4 +1,4 @@
-# DangerousReflection
+# DangerousReflection [![Build status](https://ci.appveyor.com/api/projects/status/h1f2ut0vahx574sk?svg=true)](https://ci.appveyor.com/project/303248153/dangerousreflection) [![NuGet](https://img.shields.io/nuget/vpre/DangerousReflection.svg)](http://www.nuget.org/packages/DangerousReflection)
 
 Ultra fast yet dangerous reflection extension, for now it only works on .Net Framework.
 
@@ -9,14 +9,14 @@ Ultra fast yet dangerous reflection extension, for now it only works on .Net Fra
 
 # How does it work
 
-It use the bits in object header of `Type`, `FieldInfo`, `PropertyInfo` and `MethodInfo` as cache index.
-So the access to the extra reflection information is O(1).
-But it's dangerous because it may cause undefined behavior, if you want a stable fast reflection extension please see [FastReflection](https://www.nuget.org/packages/FastReflection) or [ZKWeb.Fork.FastReflection](https://www.nuget.org/packages/ZKWeb.Fork.FastReflection).
+It use the bits in object header of `Type`, `FieldInfo`, `PropertyInfo` and `MethodInfo` as cache index.<br/>
+So the access to the extra reflection information is O(1).<br/>
+But it's dangerous because it may cause undefined behavior, if you want a stable fast reflection extension please see [FastReflection](https://www.nuget.org/packages/FastReflection) or [ZKWeb.Fork.FastReflection](https://www.nuget.org/packages/ZKWeb.Fork.FastReflection).<br/>
 
 # How to avoid the problem
 
-Don't use lock(obj) on `Type`, `FieldInfo`, `PropertyInfo` and `MethodInfo` instances.
-Don't use this extension on dynamic type (the object may be moved during reflection operation by gc compaction).
+Don't use lock(obj) on `Type`, `FieldInfo`, `PropertyInfo` and `MethodInfo` instances.<br/>
+Don't use this extension on dynamic type (the object may be moved during reflection operation by gc compaction).<br/>
 
 # Benchmark
 
