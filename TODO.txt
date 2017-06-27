@@ -1,0 +1,2 @@
+Support ref and out parameters:
+https://github.com/AspectCore/Abstractions/blob/dev/src/AspectCore.Core/Internals/Utils/MethodReflector.cs
